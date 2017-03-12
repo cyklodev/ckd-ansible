@@ -1,0 +1,7 @@
+- hosts:
+    - pilab
+  tasks:
+    - name: Reboot in 1 minutes 
+      command:  shutdown -r 1  
+      register: Linux_reboot 
+    - debug: msg="{{ Linux_reboot.stdout }}"

@@ -1,0 +1,7 @@
+- hosts:
+    - pilab
+  tasks:
+    - name: Update apt-get 
+      command: apt-get update warn=no
+      register: apt_get_update 
+    - debug: msg="{{ apt_get_update.stdout }}"
