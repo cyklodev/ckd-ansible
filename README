@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 # ckd-ansible
 
 ckd-ansible is a repository of Ansible playbook with
 
   - Sys playbooks for Raspbian
   - Net playbooks
+=======
+#Some sys tricks
+alias:
+    -system
+    -network
+    -iptables
+    -symfony
+functions:
+    -hash sum (md5,sha-1)
+    -ssh key exchange for passwordless ssh
+
+>>>>>>> cc668ae6b2493cee98145a3fe142489c77115196
