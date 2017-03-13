@@ -1,0 +1,13 @@
+- hosts:
+    - pilab
+  tasks:
+    - name: Conditionnal test 
+      command: /bin/true
+      register: result
+      ignore_errors: True
+    - name: Was success 
+      command: date
+      when: result|success
+    - name: Was failed
+      command: id
+      when: result|failed
