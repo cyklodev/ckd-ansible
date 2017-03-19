@@ -1,0 +1,8 @@
+---
+- hosts:
+   - rpi1     
+  tasks:
+   - name: Add php7 repo
+     apt_repository:
+         repo: deb http://mirrordirector.raspbian.org/raspbian/ stretch main contrib non-free rpi
+         state: present

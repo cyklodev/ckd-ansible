@@ -1,0 +1,13 @@
+---
+- hosts:
+   - rpi1
+  tasks:
+   - name: Update apt
+     apt:
+        update_cache: yes
+   - name: Install php7 using strethc repo
+     apt:
+        name: php7.0
+        state: latest
+        default_release: stretch
+        update_cache: yes

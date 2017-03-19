@@ -1,0 +1,12 @@
+---
+- hosts:
+   - rpi1
+  tasks:
+   - name: Remove  php7 using strethc repo
+     apt:
+        name: php7.0
+        state: absent
+        purge: yes
+        force: yes
+   - name: Autoremove unused packages
+     command: apt-get -y autoremove

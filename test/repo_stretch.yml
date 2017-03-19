@@ -1,0 +1,10 @@
+---
+- hosts:
+   - rpi1
+  tasks:
+   - copy:
+        src: /home/ansible/ans-lab/repo_pref.txt
+        dest: /etc/apt/preferences
+        owner: root
+        group: root
+        mode: 0644
