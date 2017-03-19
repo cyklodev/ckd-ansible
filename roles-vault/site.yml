@@ -1,0 +1,6 @@
+  - name: apply common to all nodes
+    hosts: pilab
+    remote_user: root
+
+    roles:
+       - common

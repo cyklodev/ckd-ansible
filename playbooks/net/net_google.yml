@@ -2,10 +2,10 @@
     - pilab
   tasks:
     - name: ping google ip
-      command: ping -c 1 8.8.8.8
+      command: ping -c 3 8.8.8.8
       register: ping_google_ip 
     - debug: msg="{{ ping_google_ip.stdout }}"
     - name: ping google dns 
-      command: ping -c 1 google.fr
+      command: ping -c 3 google.fr
       register: ping_google_dns
     - debug: msg="{{ ping_google_dns.stdout }}"

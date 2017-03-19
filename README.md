@@ -1,7 +1,9 @@
 # ckd-ansible
 
 ckd-ansible is a repository of Ansible playbook with
-
-  - Sys playbooks for Raspbian
-  - Net playbooks
+##Playbooks
+  - Sys for Raspbian
+  - Net 
   - Test playbook (beta, wip)
+##Roles
+  - RPI - lab 

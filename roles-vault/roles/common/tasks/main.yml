@@ -1,0 +1,4 @@
+    - name: ping google ip
+      command: ping -c 3 8.8.8.8
+    - name: ping google dns 
+      command: ping -c 3 google.fr
