@@ -2,3 +2,7 @@
 rpi1 ansible_ssh_host=10.0.0.101
 rpi2 ansible_ssh_host=10.0.0.103
 rpi3 ansible_ssh_host=10.0.0.104
+
+[dockerhype]
+docker-staging ansible_ssh_host=192.168.1.93
+docker-prod ansible_ssh_host=192.168.1.82

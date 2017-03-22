@@ -1,6 +1,17 @@
   - name: apply common to all nodes
-    hosts: pilab
+    hosts: 
+       - pilab
+       - dockerhype
     remote_user: root
 
     roles:
        - common
+
+  - name: apply docker roles
+    hosts:
+       - dockerhype
+    remote_user: root
+
+    roles:
+       - dockerhype
+

@@ -1,0 +1,14 @@
+    - name: upgrade all packages
+      yum:
+          name: '*'
+          state: latest
+    - name: check for docker 
+      stat: path=/usr/bin/docker
+      register: _svc_docker
+    
+    - name: Docker test success
+      command: date
+      when: _svc_docker.rc == 0
+    - name: Docker not installed ... start installing 
+      shell: curl -fsSL https://get.docker.com/ | sh
+      when: _svc_docker.rc != 0
