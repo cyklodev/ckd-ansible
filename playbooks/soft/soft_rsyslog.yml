@@ -1,0 +1,27 @@
+- hosts:
+    - pilab
+    - dockerhype
+  tasks:
+    - name: Install rsyslog
+      action: "{{ ansible_pkg_mgr }} name=rsyslog state=present"
+      register: rsyslog
+    - name: Update server 
+      lineinfile: 
+          dest=/etc/rsyslog.conf
+          regexp='5000'
+          line='*.*  @192.168.1.93:5000;ls_json'
+    - name: Copy template json
+      copy:
+          src: ~/ans-repo/files/template-rsyslog-json.conf
+          dest: /etc/rsyslog.d/logstash-json.conf
+          owner: root
+          group: root
+          mode: 0644
+    - name: Enable rsyslog
+      service:
+          name: rsyslog
+          enabled: yes
+    - name: Restart rsyslog
+      service:
+          name: rsyslog
+          state: restarted

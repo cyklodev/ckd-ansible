@@ -1,0 +1,7 @@
+- hosts:
+    - pilab
+    - dockerhype
+  tasks:
+    - name: Install git 
+      action: "{{ ansible_pkg_mgr }} name=git state=present"
+      register: git_install 
