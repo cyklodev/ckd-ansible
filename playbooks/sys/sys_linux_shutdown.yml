@@ -1,0 +1,8 @@
+- hosts:
+    - pilab
+    - dockerhype
+  tasks:
+    - name: Shutdown in 1 minutes 
+      command:  shutdown -h 1  
+      register: Linux_shutdown 
+    - debug: msg="{{ Linux_shutdown.stdout }}"
