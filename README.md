@@ -4,7 +4,8 @@ Is a repository of Ansible playbook with various content (mostly for mine own us
 
 # From where ?
 
-If i pick some playbook from existing you will find the source url, and also info from where the idea comes.
+If i pick some playbook from existing somewhere, you will find the source url.
+You will also found the url from where the idea comes.
 
 # What's inside ?
 
