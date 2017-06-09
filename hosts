@@ -6,3 +6,6 @@ rpi3 ansible_ssh_host=10.0.0.104
 [dockerhype]
 docker-staging ansible_ssh_host=192.168.1.93
 docker-prod ansible_ssh_host=192.168.1.82
+
+[online]
+cloud ansible_ssh_host=195.154.111.184

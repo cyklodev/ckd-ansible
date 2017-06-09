@@ -1,0 +1,20 @@
+    - name: Update ym 
+      command: yum upgrade -y
+    - name: Add repository
+      yum_repository:
+          name: epel
+          description: EPEL YUM repo
+          baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    - name: Install repo 
+      command: wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+    - name: Add repo key
+      command: rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+    - name: Update yum 
+      command: yum update
+    - name: Install openjdk
+      action: "{{ ansible_pkg_mgr }} name=java-1.8.0-openjdk state=present"
+    - name: Install jenkins
+      action: "{{ ansible_pkg_mgr }} name=jenkins state=present"
+#    - name: Start jenkins
+#      command: service jenkins start
+

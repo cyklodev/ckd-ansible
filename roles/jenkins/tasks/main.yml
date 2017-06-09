@@ -1,0 +1,3 @@
+---
+- include: install_jenkins.yml
+- include: initial_setup.yml

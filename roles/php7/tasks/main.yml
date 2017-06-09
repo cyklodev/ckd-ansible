@@ -1,0 +1,2 @@
+---
+- include: install_php7_centos.yml

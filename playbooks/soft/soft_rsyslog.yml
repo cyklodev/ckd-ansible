@@ -1,6 +1,5 @@
 - hosts:
-    - pilab
-    - dockerhype
+    - cloud
   tasks:
     - name: Install rsyslog
       action: "{{ ansible_pkg_mgr }} name=rsyslog state=present"
@@ -9,10 +8,10 @@
       lineinfile: 
           dest=/etc/rsyslog.conf
           regexp='5000'
-          line='*.*  @192.168.1.93:5000;ls_json'
+          line='*.*  @195.154.111.184:5000;ls_json'
     - name: Copy template json
       copy:
-          src: ~/ans-repo/files/template-rsyslog-json.conf
+          src: /home/mako/Git-Vault/ckd-ansible/files/template-rsyslog-json.conf
           dest: /etc/rsyslog.d/logstash-json.conf
           owner: root
           group: root
