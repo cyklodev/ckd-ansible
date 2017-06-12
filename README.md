@@ -12,9 +12,11 @@ You will also found the url from where the idea comes.
 ### Playbooks
   - Sys for Raspbian
   - Net 
+  - Rsylog for ELK
   - Test playbook (beta, wip)
 
 ### Roles
   - Test connectivity (Google)
   - Install Jenkins 2.0 (from your existing backup)
   - Install php7-fpm in unix socket  
+  - Install docker
